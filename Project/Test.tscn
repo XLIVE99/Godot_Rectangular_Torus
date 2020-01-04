@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/CircleDrawer.gd" type="Script" id=1]
+[ext_resource path="res://CamRotation.gd" type="Script" id=2]
+
+[node name="Spatial" type="Spatial"]
+
+[node name="ImmediateGeometry" type="ImmediateGeometry" parent="."]
+cast_shadow = 0
+script = ExtResource( 1 )
+detail = 18
+animationSpeed = 0.1
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4 )
+current = true
+far = 1003.8
+script = ExtResource( 2 )
+distance = 4.0
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -0.820407, 0.571781, 0, -0.571781, -0.820407, 0, 0, 0 )
